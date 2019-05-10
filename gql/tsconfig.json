@@ -1,0 +1,10 @@
+{
+  "extends": "../web/tsconfig.json",
+  "compilerOptions": {
+    "allowJs": false,
+    "noEmit": false,
+    "declaration": true,
+    "outDir": "dist"
+  },
+  "exclude": ["dist"]
+}

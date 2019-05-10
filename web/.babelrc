@@ -1,0 +1,4 @@
+{
+  "presets": ["next/babel", "@zeit/next-typescript/babel", "@babel/preset-env"],
+  "plugins": ["inline-import"]
+}

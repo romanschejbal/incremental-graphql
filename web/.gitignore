@@ -1,0 +1,8 @@
+.next
+node_modules
+**/__generated__
+.merlin
+lib
+.graphql_ppx_cache
+**/*.bs.js
+**/*.gen.tsx

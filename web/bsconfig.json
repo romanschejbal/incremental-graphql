@@ -1,0 +1,29 @@
+{
+  "name": "react-hooks-template",
+  "reason": {
+    "react-jsx": 3
+  },
+  "sources": {
+    "dir": "./",
+    "subdirs": true
+  },
+  "package-specs": [
+    {
+      "module": "commonjs",
+      "in-source": true
+    }
+  ],
+  "suffix": ".bs.js",
+  "namespace": true,
+  "bs-dependencies": ["reason-react"],
+  "refmt": 3,
+  "gentypeconfig": {
+    "language": "typescript",
+    "shims": { "ReasonReact": "ReactShim" },
+    "debug": {
+      "all": false,
+      "basic": false
+    }
+  },
+  "ppx-flags": ["graphql_ppx/ppx"]
+}

@@ -1,0 +1,17 @@
+{
+  "presets": [
+    [
+      "@babel/preset-env",
+      {
+        "targets": ["> 1%, not dead"],
+        "useBuiltIns": "usage",
+        "corejs": 2
+      }
+    ]
+  ],
+  "plugins": [
+    "inline-import",
+    "@babel/plugin-transform-modules-commonjs",
+    "@babel/plugin-transform-runtime"
+  ]
+}
