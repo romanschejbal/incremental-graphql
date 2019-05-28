@@ -1,0 +1,25 @@
+type Story {
+  by: String!
+  id: Int!
+  kids: [Comment!]!
+  score: Int!
+  time: Int!
+  title: String!
+  url: String
+}
+
+union Item = Story | Comment
+
+type Comment {
+  by: String!
+  id: Int!
+  kids: [Comment!]!
+  text: String
+  time: Int!
+  parent: Item
+}
+
+type Query {
+  topStories(offset: Int = 0, limit: Int = 20): [Story!]!
+  story(id: Int!): Story
+}

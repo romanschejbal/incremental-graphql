@@ -9,6 +9,7 @@ module Fragment = [%graphql
         text
         by
         time
+        hello
     }
     |}
 ];

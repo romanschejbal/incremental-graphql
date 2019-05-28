@@ -1,8 +1,23 @@
 import Link from 'next/link';
 import classnames from 'classnames';
 import styles from './Story.scss';
+import gql from 'graphql-tag';
+import { StoryListing } from './__generated__/StoryListing';
 
-export default function Story(props) {
+Story.fragment = gql`
+  fragment StoryListing on Story {
+    id
+    title
+    score
+    kids {
+      id
+    }
+    time
+    by
+  }
+`;
+
+export default function Story(props: { story: StoryListing }) {
   const {
     id,
     by,
