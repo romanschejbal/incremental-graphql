@@ -1,12 +1,14 @@
 import { createServer } from 'http';
 import { parse } from 'url';
 import * as next from 'next';
-import apiProxy from './apiProxy';
-import gqlProxy from './gqlProxy';
+import createProxy from './createProxy';
 
 const dev = process.env.NODE_ENV !== 'production';
 const app = next({ dev });
 const handle = app.getRequestHandler();
+
+const apiProxy = createProxy(process.env.API_SERVER_HOST as string);
+const gqlProxy = createProxy(process.env.GRAPHQL_SERVER_HOST as string);
 
 app.prepare().then(() => {
   createServer((req: any, res: any) => {
